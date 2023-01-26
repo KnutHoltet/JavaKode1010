@@ -26,7 +26,16 @@ public class Main{
         int antallYoghurt = scan.nextInt();
         matvarer.put(yoghurt, antallYoghurt);
 
-        matvarer.forEach((key, value) -> System.out.println(key + " : " + value));
+        int sum = 0;
+        /*
+        proevde aa finne en maate aa gjoere det i en loop men orker ikke,
+        bare gjoer det manuelt for aa loese oppgaven
+         */
+        for(int i : matvarer.values()){
+
+        }
+
+
 
     }
 }
