@@ -39,7 +39,6 @@ public class Rutenett {
         // Itererer gjennom og printer ut tegn
         for (Celle[] rad : rutene) {
             System.out.println();
-            System.out.println();
             for (Celle kol : rad) {
                 System.out.print(kol.hentStatusTegn());
             }
