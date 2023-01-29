@@ -19,6 +19,7 @@ public class GameOfLife {
             // Enter returnerer en tom string
             if(readString.isEmpty()){
                 verden.skrivUtGenNr();
+                verden.skrivUtAntallLevende();
                 verden.tegn();
                 verden.oppdatering();
                 System.out.println("\nTrykk enter for aa kjore programmet, alt annet for aa stoppe");

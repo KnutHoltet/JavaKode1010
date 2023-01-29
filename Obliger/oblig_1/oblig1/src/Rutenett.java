@@ -45,30 +45,20 @@ public class Rutenett {
         }
     }
 
-    public void settNaboer(int rad, int kol){
+    public void settNaboer(int rad, int kol) {
+        // Cellen jeg sjekker
         Celle celle = hentCelle(rad, kol);
-
-        // Begynnelsen av aa iterere gjennom radene
-        for (int i = 0; i < rutene.length; i++){
-
-            // Sjekker selve raden, over og under
-            if(i == rad || i == (rad+1) || i == (rad-1)){
-
-                // Begynnelsen av iterere gjennom kolonnene
-                for (int j = 0; j < rutene[i].length; j++){
-
-                    // Sjekker ruten til venstre, hoeyre, over og under
-                    if(j == kol || j == (kol+1) || j == (kol-1)){
-
-                        // Dersom det ikke er selve ruten
-                        if(i != rad || j != kol){
-
-                            // Hent cellen som er ikke er utenfor indeksen
-                            if(hentCelle(i,j) != null){
-                                Celle nabo = hentCelle(i,j);
-                                celle.leggTilNabo(nabo);
-                            }
-                        }
+        // Sjekker selve raden, over og under
+        for (int i = 0; i < 2; i++){
+            // Sjekker ruten ved siden av, over og under
+            for (int j = 0; j < 2; j++){
+                // Hvis det ikke er selve ruta
+                if (i != rad || j != kol){
+                    // Og indeks ikke er out of bounds
+                    if (hentCelle(i, j) != null){
+                        // Legg til nabo
+                        Celle nabo = hentCelle(rad+i,kol+j);
+                        celle.leggTilNabo(nabo);
                     }
                 }
             }
@@ -95,8 +85,4 @@ public class Rutenett {
         }
         return teller;
     }
-
-
-
-
 }

@@ -39,4 +39,9 @@ public class Verden {
     public void skrivUtGenNr(){
         System.out.println(genNr);
     }
+
+    // Metode for aa printe ut antall levende
+    public void skrivUtAntallLevende(){
+        System.out.println(rutenett.antallLevende());
+    }
 }
