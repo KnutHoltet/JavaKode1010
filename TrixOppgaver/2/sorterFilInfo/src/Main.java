@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         try{
-            ArrayList<String> hundListe = new ArrayList<>();
-            ArrayList<String> personListe = new ArrayList<>();
+            ArrayList<Hund> hundListe = new ArrayList<>();
+            ArrayList<Person> personListe = new ArrayList<>();
             File f = new File("navn.txt");
             Scanner scan = new Scanner(f);
             while(scan.hasNextLine()){
@@ -14,20 +14,22 @@ public class Main {
                 String type = data.substring(0, data.indexOf(" "));
                 String navn = data.substring(data.indexOf(" "));
                 if (type.equals("P")){
-                    personListe.add(navn);
+                    Person person = new Person(navn);
+                    personListe.add(person);
                 }else{
-                    hundListe.add(navn);
+                    Hund hund = new Hund(navn);
+                    hundListe.add(hund);
                 }
             }
 
             System.out.println("Her kommer personer:");
-            for(String person : personListe){
-                System.out.println(person);
+            for(Person person : personListe){
+                System.out.println(person.hentNavn());
             }
 
             System.out.println("Her kommer hunder:");
-            for(String hund : hundListe){
-                System.out.println(hund);
+            for(Hund hund : hundListe){
+                System.out.println(hund.hentNavn());
             }
 
         }catch(FileNotFoundException e){
