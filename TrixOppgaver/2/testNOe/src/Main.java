@@ -12,8 +12,5 @@ public class Main {
         map.put("Key1", values);
 
         System.out.println(map);
-
-
-
     }
 }

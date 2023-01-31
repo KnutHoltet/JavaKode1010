@@ -27,11 +27,8 @@ public class Main{
                 ArrayList<String> values = map.get(fag);
                 values.add(data);
                 map.put(fag, values);
-
             }
-
         }
         System.out.println(map);
-
     }
 }
