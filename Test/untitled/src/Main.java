@@ -54,5 +54,6 @@ public class Main{
         for (Hund h : hunder) {
             System.out.println(h.hentNavn());
         }
+		
     }
 }
