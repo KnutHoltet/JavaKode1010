@@ -46,18 +46,18 @@ public class Rutenett {
     }
 
     public void settNaboer(int rad, int kol) {
-        // Cellen jeg sjekker
+        // Cellen  sjekker
         Celle celle = hentCelle(rad, kol);
         // Sjekker selve raden, over og under
-        for (int i = 0; i < 2; i++){
+        for (int i = -1; i < 2; i++){
             // Sjekker ruten ved siden av, over og under
-            for (int j = 0; j < 2; j++){
+            for (int j = -1; j < 2; j++){
                 // Hvis det ikke er selve ruta
-                if (i != rad || j != kol){
+                if (hentCelle(i, j) != null){
                     // Og indeks ikke er out of bounds
-                    if (hentCelle(i, j) != null){
+                    if (hentCelle(i,j) != celle){
                         // Legg til nabo
-                        Celle nabo = hentCelle(rad+i,kol+j);
+                        Celle nabo = hentCelle(i,j);
                         celle.leggTilNabo(nabo);
                     }
                 }

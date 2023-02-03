@@ -1,9 +1,11 @@
 public class Celle{
     public boolean levende;
     public Celle[] naboer;
-    public int antNaboer = 0;
-    public int antLevendeNaboer = 0;
+    public int antNaboer;
+    public int antLevendeNaboer;
     public Celle(){
+        antNaboer = 0;
+        antLevendeNaboer = 0;
         levende = false;
         naboer = new Celle[8];
     }
@@ -32,9 +34,11 @@ public class Celle{
 
         // Gjoer nearmeste ledig nabo om til celle
         while (antNaboer < naboer.length && !sattInn){
-            naboer[antNaboer] = celle;
-            antNaboer++;
-            sattInn = true;
+            if (naboer[antNaboer] != null){
+                naboer[antNaboer] = celle;
+                antNaboer++;
+                sattInn = true;
+            }
         }
     }
 
