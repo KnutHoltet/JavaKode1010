@@ -29,7 +29,7 @@ public class Rutenett {
 
     public Celle hentCelle(int rad, int kol){
         // Returnerer null, dersom indeks er ute av range
-        if ((rad < 0 || kol < 0) || (rad > rutene.length-1 || kol > rutene[0].length-1)){
+        if ((rad < 0 || kol < 0) || (rad > antRader -1 || kol > antKolonner -1)){
             return null;
         }
         return rutene[rad][kol];
@@ -46,21 +46,19 @@ public class Rutenett {
     }
 
     public void settNaboer(int rad, int kol) {
-        // Cellen  sjekker
-        Celle celle = hentCelle(rad, kol);
-        // Sjekker selve raden, over og under
-        for (int i = -1; i < 2; i++){
-            // Sjekker ruten ved siden av, over og under
-            for (int j = -1; j < 2; j++){
-                // Hvis det ikke er selve ruta
-                if (hentCelle(i, j) != null){
-                    // Og indeks ikke er out of bounds
-                    if (hentCelle(i,j) != celle){
-                        // Legg til nabo
-                        Celle nabo = hentCelle(i,j);
-                        celle.leggTilNabo(nabo);
-                    }
+        /*
+        Sjekker selve raden, over og under, hvis det er selve cellen
+        gaa videre
+         */
+        for (int i = -1; i <= 1; i++) {
+            for (int j = -1; j <= 1; j++) {
+                if (i == 0 && j == 0) {
+                    continue;
                 }
+                //
+                Celle celle = hentCelle(rad,kol);
+                Celle nabo = hentCelle(rad + i, kol + j);
+                celle.leggTilNabo(nabo);
             }
         }
     }

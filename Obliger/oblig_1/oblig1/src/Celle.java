@@ -34,12 +34,22 @@ public class Celle{
 
         // Gjoer nearmeste ledig nabo om til celle
         while (antNaboer < naboer.length && !sattInn){
-            if (naboer[antNaboer] != null){
+            //hvis det er ledig plass
+            if(naboer[antNaboer] == null){
                 naboer[antNaboer] = celle;
-                antNaboer++;
+                //satt inn sann
                 sattInn = true;
             }
         }
+
+        //saa teller vi naboer
+        antNaboer = 0;
+        for(Celle cel : naboer){
+            if(cel != null){
+                antNaboer++;
+            }
+        }
+
     }
 
     public void tellLevendeNaboer(){
