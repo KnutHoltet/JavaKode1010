@@ -55,7 +55,7 @@ public class Rutenett {
                 if (i == 0 && j == 0) {
                     continue;
                 }
-                //
+
                 Celle celle = hentCelle(rad,kol);
                 Celle nabo = hentCelle(rad + i, kol + j);
                 celle.leggTilNabo(nabo);

@@ -23,14 +23,18 @@ public class Verden {
     public void oppdatering(){
         for (int i = 0; i < this.rad; i++){
             for (int j = 0; j < this.kol; j++){
-
-                // Henter celle og oppdaterer status
+                // Henter celle og teller naboer
                 Celle celle = rutenett.hentCelle(i, j);
-
                 celle.tellLevendeNaboer();
+            }
+        }
+        for (int i = 0; i < this.rad; i++){
+            for (int j = 0; j < this.kol; j++){
+                Celle celle = rutenett.hentCelle(i, j);
                 celle.oppdaterStatus();
             }
         }
+
         // Husker aa oeke generasjonsnummeret
         genNr++;
     }
