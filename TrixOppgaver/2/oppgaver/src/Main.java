@@ -1,0 +1,4 @@
+//trekant
+//rektangel
+//sirkel
+//kvadrat
