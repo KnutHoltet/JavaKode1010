@@ -75,8 +75,11 @@ class Kvadrat extends Rektangel{
 }
 
 public class Main{
-    public static void main(String[] args)  throws FileNotFoundException {
+    public static void main(String[] args) {
         ArrayList<Firkant> liste = new ArrayList<>();
+        /*
+
+         */
         try{
             Scanner scan = new Scanner(
                     new FileReader(args[0])
