@@ -23,7 +23,6 @@ public class Main {
         map.put("Marius", 20);
         map.put("Viljar", 30);
         map.forEach((k, v) -> System.out.println(k + " : " + v));
-
     }
 }
 
