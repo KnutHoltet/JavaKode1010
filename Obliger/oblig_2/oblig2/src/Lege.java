@@ -1,0 +1,3 @@
+class Lege{
+    public Lege(){}
+}
