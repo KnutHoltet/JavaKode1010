@@ -1,6 +1,6 @@
-class BlaaResepter extends Resept {
+class BlaaResept extends Resept {
     static double rabatt = 0.75;
-    public BlaaResepter(Legemiddel legemiddel, Lege utskrivendeLege, int reit){
+    public BlaaResept(Legemiddel legemiddel, Lege utskrivendeLege, int reit){
         super(legemiddel, utskrivendeLege, reit);
         double gammelPris = Math.round(legemiddel.hentPris() * rabatt);
         int nyPris = (int) gammelPris;
@@ -8,10 +8,14 @@ class BlaaResepter extends Resept {
     }
 
     public String farge(){
-        return "Dette er en blaa resept";
+        return "Blaa";
     }
 
     public int prisAaBetale(){
         return legemiddel.hentPris();
+    }
+
+    public String toString(){
+        return String.format("Resept-farge: %s", this.farge());
     }
 }

@@ -1,6 +1,6 @@
-class HviteResepter extends Resept {
+class HvitResept extends Resept {
 
-    public HviteResepter(Legemiddel legemiddel, Lege utskrivendeLege, int reit){
+    public HvitResept(Legemiddel legemiddel, Lege utskrivendeLege, int reit){
         super(legemiddel, utskrivendeLege, reit);
     }
     public String farge(){
@@ -10,5 +10,8 @@ class HviteResepter extends Resept {
         int pris = legemiddel.hentPris();
         return pris;
     }
-}
 
+    public String toString(){
+        return String.format("Resept-farge: %s", this.farge());
+    }
+}

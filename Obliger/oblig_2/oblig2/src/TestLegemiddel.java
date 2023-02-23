@@ -5,7 +5,7 @@ class TestLegemiddel {
             System.exit(1);
         }
     }
-    private static void testNarkotisk(){
+    public static void testNarkotisk(){
         String navn = "Morfin";
         int pris = 100;
         double virkestoff = 10;

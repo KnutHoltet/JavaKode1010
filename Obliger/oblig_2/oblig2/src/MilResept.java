@@ -1,4 +1,4 @@
-class MilResept extends HviteResepter {
+class MilResept extends HvitResept {
     public MilResept(Legemiddel legemiddel, Lege utskrivendeLege){
         super(legemiddel, utskrivendeLege, 3);
         legemiddel.settPris(0);
@@ -11,5 +11,10 @@ class MilResept extends HviteResepter {
 
     public int hentReit(){
         return this.reit;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("Legemiddel: %s, Pris: %s, Reit: %s", legemiddel.toString(), this.prisAaBetale(), this.reit);
     }
 }
