@@ -52,7 +52,7 @@ class Koe<T> implements Liste<T>{
             beholder = beholder.hentNeste();
             //til slutt sitter vi med et obhekt som ikke har neste fordi da gaar vi ut av while loopen
         }
-        return null;
+        return beholder;
     }
 
     @Override
