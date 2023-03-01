@@ -1,12 +1,12 @@
 abstract class Lenkeliste <E> implements Liste <E>{
     Node<E> rot = new Node<E>();
 
-    public E hent(){
+    public E hent(int pos){
         //Todo
         return null;
     }
 
-    public E fjern(){
+    public E fjern(int pos){
         //Todo
         return null;
     }
@@ -16,8 +16,8 @@ abstract class Lenkeliste <E> implements Liste <E>{
         return 1;
     }
 
-    public void leggTil(E x){
-
+    public void leggTil(int pos, E x){
+        //Todo
     }
 
 
