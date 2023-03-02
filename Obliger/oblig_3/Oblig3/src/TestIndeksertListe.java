@@ -17,7 +17,8 @@ class TestIndeksertListe {
 	    p("stoerrelse() gir " + kLen + " og ikke " + fLen);
 	    return false;
 	}
-	
+
+
 	for (int i = 0;  i < fLen;  ++i) {
 	    int fElem = fasit[i];
 	    Integer kElem = k.fjern();
@@ -140,15 +141,17 @@ class TestIndeksertListe {
 	    ++antOK;
 	}
 
+
 	// Oppsummering
 	if (antFeil == 0) {
 	    p("Alt gikk bra!");
 	} else {
 	    p("I alt gikk " + antOK + " tester bra, men " + antFeil +
-	      " inneholdt feil."); 
-	}
+	      " inneholdt feil.");
+
+    }
+
     }
 }
-
 
  */

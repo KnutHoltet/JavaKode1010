@@ -1,5 +1,5 @@
 interface Liste <E>{
-    int storrelse ();
+    int stoerrelse ();
     void leggTil ();
     E hent ();
     E fjern ();

@@ -1,4 +1,3 @@
-/*
 class TestStabel {
     private static void info (int nr, String tekst) {
 	System.out.print("Test " + nr + " " + tekst + " ... ");
@@ -107,5 +106,3 @@ class TestStabel {
     }
 }
 
-
- */
